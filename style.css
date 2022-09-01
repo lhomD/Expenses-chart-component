@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+/* font-family: 'DM Sans', sans-serif; */
+
+:root{
+    --soft-red-color: hsl(10, 79%, 65%);
+    --cyan-color: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25,47%,15%);
+    --cream-color: hsl(27, 66%, 92%);
+    --pale-orange: hsl(33, 100%, 98%);
+    --meduim-brown-color: hsl(28, 10%, 53%);
+    --cyan-active-color: hsl(187, 49%, 80%);
+    --soft-red-active: hsl(10, 100%, 76%);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html{
+    font-size: 62.5%;
+} */
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F7E9DC;
+    font-family: 'DM Sans', sans-serif;
+}
+
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+}
+
+.content{
+    width: 33.75rem;
+    max-width: 100%;
+    color: var(--pale-orange);
+}
+
+.content img{
+    width: 3.625rem;
+}
+
+.head{
+    background-color: var(--soft-red-color);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.head h1{
+    font-size: 0.938rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.head p{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.938rem;
+}
+
+.body{
+    background-color: var(--pale-orange);
+    padding: 1.5rem 1rem;
+    border-radius: 0.625rem;
+}
+
+.body > p {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.938rem;
+    color: var(--dark-brown);
+}
+
+.diagram{
+    border-bottom: 2px solid var(--cream-color);
+    margin: 1.5rem auto;
+    color: var(--meduim-brown-color);
+    display: flex;
+    justify-content: space-between;    
+    align-items: flex-end;
+    height: 223px;
+    text-align: center;
+}
+
+.bars{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    width: 2.2rem;
+}
+
+.bar{
+    width: 2rem;
+    border-radius: 3px;
+    background-color: var(--soft-red-color);
+    cursor: pointer;
+    transition: background-color 150ms ease;
+}
+
+
+.value{
+    background-color: var(--dark-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--pale-orange);
+    padding: 0.5rem 0.3rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* .bars:nth-of-type(1) > .bar{
+    height: 60px;
+}
+
+.bars:nth-of-type(2) > .bar{
+    height: 55px;
+} */
+
+/* .bars:nth-of-type(3) > .bar{
+    background-color: var(--cyan-color);
+    height: 100px;
+} */
+
+.bars > .bar:hover{
+    background-color: var(--soft-red-active);
+}
+
+
+/* .bars:nth-of-type(4) > .bar{
+    height: 50px;
+}
+
+.bars:nth-of-type(5) > .bar{
+    height: 125px;
+}
+
+.bars:nth-of-type(6) > .bar{
+    height: 100%;
+}
+
+.bars:nth-of-type(7) > .bar{
+    height: 90px;
+} */
+
+/* .bars:nth-of-type(3) > .bar:hover{
+    background-color: var(--cyan-active-color);
+} */
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark-brown);
+}
+
+.total span{
+    display: block;
+}
+
+.total div:first-of-type p{
+    font-weight: 500;
+    font-size: 0.938rem;
+    line-height: 2rem;
+    color: var(--meduim-brown-color);
+    
+}
+.total div:first-of-type span{
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    color: var(--dark-brown);
+}
+
+.total div:nth-child(2) p{
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    color: var(--dark-brown);
+    text-align: right;
+}
+
+.total div:nth-child(2) span{
+    font-weight: 500;
+    font-size: 0.938rem;
+    color: var(--meduim-brown-color);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 501px){
+    .bar{
+        width: 3rem;
+    }
+    .bars{
+        width: 3.2rem;
+    }
+    .value{
+        font-size: 0.8rem;
+        padding: 0.75rem;
+    }
+}
