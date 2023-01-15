@@ -5,7 +5,7 @@ let barEl;
 function init() {
     //Get week number
     let d = new Date();
-    let day = d.getDay() - 1;
+    let day = d.getDay();
 
     //Adding style and functions to the bars
     barEl = document.querySelectorAll(".bars");
@@ -46,7 +46,6 @@ function showDivClick() {
     newDiv.innerHTML = "$" + this.getAttribute("data-sum");
     newDiv.className = "value";
 
-
     let shownDiv = document.querySelector(".value");
     if (shownDiv) {
         shownDiv.parentNode.removeChild(shownDiv.parentNode.children[0]);
@@ -54,18 +53,4 @@ function showDivClick() {
     } else {
         this.insertBefore(newDiv, beforeDiv);
     }
-
-
-    /*   let beforeDiv = this.querySelector(".bar");
-      let newDiv = document.createElement("div");
-      newDiv.innerHTML = "$" + this.getAttribute("data-sum");
-      newDiv.className = "value";
-      this.insertBefore(newDiv, beforeDiv); */
-
-    /* for (let i = 0; i < barEl.length; i++) {
-        if (barEl[i].children[0].classList == ("value")) {
-            barEl.removeChild(barEl.children[0]);
-            console.log(barEl[i])
-        }
-    } */
 }
