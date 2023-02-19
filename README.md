@@ -4,4 +4,4 @@ Another fun project from frontendmentor.io. HTML, CSS and JavaScript. Very good 
 
 Try on [Netlify.com](https://regal-cupcake-21ea9b.netlify.app/)
 
-[Design preview for the Expenses chart component coding challenge](./component.png)
+![Design preview for the Expenses chart component coding challenge](./component.png)
